@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script>
+        function GreetUser() {
+            // Get the value from the input field
+            var username = document.getElementById("username").value;
+            // Set the text of the span element to the username
+            document.getElementById("spanUsername").innerText = username;
+        }
+        function changeBG(color, element) {
+            // Change the background color of the clicked element
+            element.style.backgroundColor = color;
+        }
+    </script>
+</head>
+<body>
+    <div id="container" style="
+    width: 1200px;
+    margin: 0 auto;
+">
+        <h1>DOM Manipulation</h1>
+        <p>This is a simple example of DOM manipulation.</p>    
+        <div style="
+    background: lightgray;
+    line-height: 50px;
+    text-align: center;
+    font-size: larger;
+"> Hello <span id="spanUsername"></span></div>
+        <div style="margin: 0 auto;text-align: center;">
+            <div id="red" style="display: inline-block; padding: 50px;margin: 5px;border:1px solid;" onclick="changeBG('red', this)">RED</div>
+            <div id="blue" style="display: inline-block; padding: 50px;margin: 5px;border:1px solid;"  onclick="changeBG('blue', this)">BLUE</div>
+            <div id="green" style="display: inline-block; padding: 50px;margin: 5px;border:1px solid;"  onclick="changeBG('green', this)">GREEN</div>
+            <div id="yellow" style="display: inline-block; padding: 50px;margin: 5px;border:1px solid;"  onclick="changeBG('yellow', this)">YELLOW</div>
+        </div>
+        <br/>
+        <div style="margin: 0 auto;text-align: center;">
+            <input type="text" id="username" placeholder="Enter your name">
+            <button id="btn" onclick="GreetUser()">Greet</button>
+        </div>
+    </div>    
+</body>
+</html>
