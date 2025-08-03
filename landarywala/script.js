@@ -87,14 +87,11 @@ document.getElementById("book-now-btn").addEventListener("click", function () {
       // Show Thank You Message
       document.getElementById("thank-you-msg").style.display = "block";
 
-      // Populate email mock content
-      document.getElementById("preview-name").textContent = name;
-      document.getElementById("preview-fullname").textContent = name;
-      document.getElementById("preview-email").textContent = email;
-      document.getElementById("preview-email2").textContent = email;
-      document.getElementById("preview-phone").textContent = phone;
+      // Clear the form
+      document.getElementById("booking-form").reset();
 
-      // Show Email Preview
-      document.getElementById("email-preview").style.display = "block";
+      // Clear the cart
+      cart = [];
+      updateCart();
     });
 
